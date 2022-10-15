@@ -13,7 +13,7 @@ function game() {
   }
 
   // function to play rock paper scissors
-  function playRound(playerScore, computerScore) {
+  function playRound() {
     const playerSelection = prompt(
       'Please pick Paper, Rock, Scissors',
     ).toUpperCase();
@@ -23,10 +23,8 @@ function game() {
 
     // playerSelection = Rock
     if (playerSelection === 'ROCK' && computerSelection === 'Paper') {
-      computerScore++;
       return 'You Lose! Paper beats Rock';
     } else if (playerSelection === 'ROCK' && computerSelection === 'Scissors') {
-      playerScore++;
       return 'You Win! Rock beats Scissors';
     } else if (playerSelection === 'ROCK' && computerSelection === 'Rock') {
       return 'Its a draw';
@@ -34,7 +32,6 @@ function game() {
 
     // playerSlection = Scissors
     if (playerSelection === 'SCISSORS' && computerSelection === 'Paper') {
-      playerScore++;
       return 'You Win! Scissors beats Paper';
     } else if (
       playerSelection === 'SCISSORS' &&
@@ -42,7 +39,6 @@ function game() {
     ) {
       return 'Its a draw';
     } else if (playerSelection === 'SCISSORS' && computerSelection === 'Rock') {
-      computerScore++;
       return 'You Lose! Rock beats Scissors';
     }
 
@@ -53,10 +49,8 @@ function game() {
       playerSelection === 'PAPER' &&
       computerSelection === 'Scissors'
     ) {
-      computerScore++;
       return 'You Lose! Scissors beats Paper';
     } else if (playerSelection === 'PAPER' && computerSelection === 'Rock') {
-      playerScore++;
       return 'You Win! Paper beats Rock';
     }
   }
