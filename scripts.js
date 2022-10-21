@@ -37,9 +37,9 @@ function game(playerSelection, computerSelection) {
   if (playerScore == computerScore) {
     console.log('5 rounds, its a tie');
   } else if (playerScore > computerScore) {
-    console.log('You win the game');
+    console.log('You Win the Game');
   } else if (playerScore < computerScore) {
-    console.log('You lose the game');
+    console.log('You Lose the Game');
   }
 }
 
